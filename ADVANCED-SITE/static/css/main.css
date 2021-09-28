@@ -28,7 +28,6 @@ html{
     align-items: center;
     min-height: 10vh;
     box-shadow: 0 0 2rem 0 rgba(0, 0, 0, .6);
-    /* background-color: #c8d8e4; */
     position: relative;
 
 }
@@ -49,10 +48,15 @@ html{
     align-items: center;
     float: right;
 }
+.navMenu li a:hover{
+    color: var(--brown-black);
+}
 .navMenu li a{
     padding: 1rem;
     font-size: 1.9rem;
     font-family: sans-serif;
+    text-decoration: none;
+    transition: all .3s ease-in-out;
 }
 .humbburgar div{
     width: 25px;
@@ -62,14 +66,15 @@ html{
     cursor: pointer;
    
 }
+.container p{
+    font-size: 1.5rem;
+}
 .container{
     width: 90%;
     color: var(--brown-black);
     position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+    top: 5%;
+    padding: 2rem 3rem;
     position: relative;
 }
 form{
@@ -77,23 +82,14 @@ form{
     background: transparent;
 }
 
-.sign-up{
-    transform: translateY(10%);
-}
-.signup{
-    transform: translateY(20%);
-}
-
 .signup,
 .login,
 .log-in{
     text-align: left;
-    left: 50%;
-    padding: 0 30%;
 }
 
 .log-in{
-    padding: 2rem 30%;
+    padding: 2rem 0;
 }
 
 .login input{
@@ -105,7 +101,6 @@ form{
 .signup input[type='text'],
 .login input[type='text']{
     border: none;
-    outline: none;
     padding: .5rem;
     font-size: 1.5rem;
     color: #001;
@@ -123,11 +118,12 @@ form{
     font-size: 1.5rem;
     color: var(--light-white);
 }
-.input-btn{
-    padding-top: 2rem;
+
+.signup input[type='submit']:hover,
+.login input[type='submit']:hover{
+    color:var(--light-white);
+    background-color: var(--brown-black);
 }
-
-
 
 
 
@@ -137,14 +133,24 @@ form{
 
 
 /* home */
-
 h1.hero{
     font-size: 3rem;
     color: var(--brown-black);
     padding: 0 0 2rem 0;
 }
 p.hero-p{
-    /* transform: translateY(-20%); */
+    
     font-size: 1.8rem;
     color: #001;
+}
+
+
+
+@media (max-width:500px) {
+    html{
+        font-size: 50.5%;
+    }
+    .navigation{
+        min-height: 5vh;
+    }
 }
